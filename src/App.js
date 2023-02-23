@@ -7,11 +7,16 @@ import HomePage from "./pages/HomePage";
 import PrivateRoute from "./helpers/privateRoute";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import { useEffect } from "react";
+import LogingPage from "./pages/LogingPage";
+import { updateComponentState } from "./store/itemsReducer";
 function App() {
+  updateComponentState();
   return (
     <div className="App">
       <Header />
       <Main />
+      <LogingPage />
     </div>
   );
 }

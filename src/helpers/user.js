@@ -1,6 +1,6 @@
 import axios from "axios";
 import $api from "../api";
-
+import { API_URL } from "../api";
 export const registerUser = (username, email, password) => {
   $api
     .post("register/", { username, email, password })
@@ -8,8 +8,8 @@ export const registerUser = (username, email, password) => {
     .catch((err) => console.log(err));
 };
 export const loginUser = (username, password) => {
-  $api
-    .post("http://127.0.0.1:8000/api/login/", { username, password })
-    .then((res) => localStorage.setItem("Token", res.data.token))
+  axios
+    .post(`${API_URL}auth/token/login/`, { username, password })
+    .then((res) => localStorage.setItem("Token", res.data.auth_token))
     .catch((err) => console.log(err));
 };

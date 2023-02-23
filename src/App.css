@@ -60,5 +60,139 @@
 }
 .route_element .active .route_inner {
   background-color: rgba(0, 0, 0, 0.422);
-  color: rgba(0, 194, 203, 255);
+  color: whitesmoke;
+}
+.homepage {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.serach {
+  min-height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.serach input {
+  height: 100%;
+  width: 90%;
+}
+.search_btn {
+  width: 10%;
+  background: gray;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  background: rgb(229, 229, 229);
+  height: 100%;
+  width: 100%;
+}
+.item {
+  margin: 10px 20px;
+  padding: 10px 20px;
+  background: white;
+  flex: 0 1 98%;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+}
+
+.item_top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.item_top_left {
+  display: flex;
+  flex-direction: row;
+}
+.item_img img {
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.087);
+  margin: 0 20px 0 0;
+}
+.detailed_info {
+  display: flex;
+  flex-direction: column;
+}
+.detailed_info .name {
+  color: rgb(3, 94, 99);
+  font-size: 16px;
+}
+.item_top_right {
+  display: flex;
+  flex: 0 1 20%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item_top_right .price {
+  font-size: 24px;
+}
+/* logging */
+
+.logingpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logging_box {
+  width: 395px;
+  height: 288px;
+}
+.logingpage_header {
+  background: rgb(37, 150, 190);
+  color: white;
+  text-align: center;
+  padding: 15px 16px;
+  font-size: 18px;
+  border-radius: 5px 5px 0 0;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  min-height: 100%;
+  border-radius: 0 0 5px 5px;
+  justify-content: space-around;
+}
+.labels {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  justify-content: space-between;
+}
+.labels > :not(:last-child) {
+  margin: 0 0 10px 0;
+}
+
+.labels input {
+  width: 90%;
+  height: 32px;
+}
+.submission {
+  flex: 0 1 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submission > *:hover {
+  cursor: pointer;
+  transform: translate(10px, 0);
 }
