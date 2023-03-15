@@ -1,9 +1,9 @@
 import axios from "axios";
 import $api from "../api";
 import { API_URL } from "../api";
-export const registerUser = (username, email, password) => {
+export const registerUser = (email, username, password) => {
   $api
-    .post("register/", { username, email, password })
+    .post("auth/users/", { email, username, password })
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
 };

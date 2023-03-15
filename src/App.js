@@ -11,12 +11,11 @@ import { useEffect } from "react";
 import LogingPage from "./pages/LogingPage";
 import { updateComponentState } from "./store/itemsReducer";
 function App() {
-  updateComponentState();
   return (
     <div className="App">
       <Header />
       <Main />
-      <LogingPage />
+      {/* <LogingPage /> */}
     </div>
   );
 }

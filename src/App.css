@@ -130,25 +130,32 @@
 .item_top_right {
   display: flex;
   flex: 0 1 20%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 .item_top_right .price {
   font-size: 24px;
 }
+
+.add_btn {
+  padding: 10px 15px;
+  background-color: orange;
+  border-radius: 5px;
+}
 /* logging */
 
 .logingpage {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 110%;
   background: rgb(243, 243, 243);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .logging_box {
+  transform: translate(0, -50%);
   width: 395px;
   height: 288px;
 }
@@ -168,6 +175,7 @@
   min-height: 100%;
   border-radius: 0 0 5px 5px;
   justify-content: space-around;
+  overflow: hidden;
 }
 .labels {
   width: 90%;
@@ -195,4 +203,37 @@
 .submission > *:hover {
   cursor: pointer;
   transform: translate(10px, 0);
+}
+.submit_btn {
+  margin: 0 0 5px 0;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  background: rgb(229, 229, 229);
+  height: 90vh;
+  width: 100%;
+  overflow: scroll;
+}
+.one_news {
+  display: flex;
+  margin: 15px 20px;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.087);
+}
+.news_info {
+  margin: 0 0 0 20px;
+}
+.news_info > * {
+  margin: 0 0 10px 0;
+}
+.news_img img {
+  width: 400px;
+}
+.news_title {
+  font-size: 32px;
+}
+.news_desc {
 }

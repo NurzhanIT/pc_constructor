@@ -4,10 +4,7 @@ const Item = ({ component }) => {
       <div className="item_top">
         <div className="item_top_left">
           <div className="item_img">
-            <img
-              src="https://static.shop.kz/upload/iblock/9fc/488co8swhuk6bsl6lvwvhmjgljgzsnab/167232o10.jpg"
-              alt=""
-            />
+            <img style={{ width: "200px" }} src={component.image} alt="" />
           </div>
           <div className="detailed_info">
             <div className="name">{component.name}</div>
@@ -16,6 +13,7 @@ const Item = ({ component }) => {
 
         <div className="item_top_right">
           <div className="price">{component.price}₸</div>
+          <div className="add_btn">Добваить в сборку</div>
         </div>
       </div>
       <div className="item_bottom">

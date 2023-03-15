@@ -4,6 +4,7 @@ import { getComponents } from "../helpers/item";
 import { updateComponentState } from "../store/itemsReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../helpers/user";
+import { userLogState } from "../store/userReducer";
 const HomePage = () => {
   const dispatch = useDispatch();
   const isUpdate = useSelector(
@@ -15,6 +16,7 @@ const HomePage = () => {
   const [state, setState] = useState(true);
   useEffect(() => {
     dispatch(getComponents());
+    dispatch(userLogState());
   }, [state]);
 
   console.log(isUpdate, components);
@@ -22,7 +24,7 @@ const HomePage = () => {
     <div className="homepage">
       <div className="serach">
         <input type="text" />
-        <div className="search_btn">w</div>
+        <div className="search_btn"></div>
       </div>
 
       <div className="items">

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Login from "../components/Login";
+import { userLogState } from "../store/userReducer";
 import Register from "../components/Register";
+import { useSelector } from "react-redux";
 const LogingPage = () => {
+  const user = useSelector((user) => user.user);
+
   const [userLog, setUserLog] = useState(true);
   return (
     <div className="logingpage">
